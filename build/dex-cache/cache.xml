@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="I:\Ventanilla\Android\VentanillaApp\VentanillaApp\build\pre-dexed\debug\support-v13-19.1.0-94675a09d4167e3aecf283b0f4631075e65530b6.jar"
+        jar="I:\Android Windows\sdk\extras\android\m2repository\com\android\support\support-v13\19.1.0\support-v13-19.1.0.jar"
+        jumboMode="false"
+        revision="19.0.3"
+        sha1="6b852a232f642c75a7fdfc7212b841b8c8f8959c"/>
+    <item
+        dex="I:\Ventanilla\Android\VentanillaApp\VentanillaApp\build\pre-dexed\debug\classes-afb6ab19ec9ef7ae76c9d4dd519e9c4c0cfdd332.jar"
+        jar="I:\Ventanilla\Android\VentanillaApp\build\exploded-aar\com.google.android.gms\play-services\4.2.42\classes.jar"
+        jumboMode="false"
+        revision="19.0.3"
+        sha1="e5f81129dfb3d02df80126512bc98278ed2bb40a"/>
+    <item
+        dex="I:\Ventanilla\Android\VentanillaApp\VentanillaApp\build\pre-dexed\debug\support-v4-19.1.0-c168cedc5e2e1398c89118c1bf87aab39b91acc0.jar"
+        jar="I:\Android Windows\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="19.0.3"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67"/>
+
+</pre-dex-items>

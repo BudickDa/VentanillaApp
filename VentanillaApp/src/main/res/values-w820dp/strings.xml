@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pressure">Luftdrucksensor</string>
+    <string name="height">Höhe</string>
+    <string name="airpressure">Luftdruck:</string>
+</resources>

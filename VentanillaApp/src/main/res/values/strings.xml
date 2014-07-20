@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Ventanilla</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_section1">Anleitung</string>
+    <string name="title_section2">Sensoren</string>
+    <string name="title_section3">Steuerung</string>
+    <string name="action_settings">Settings</string>
+    <string name="welcome_text">bei der App für Ventanilla. Wische auf deinem Handy nach link oder rechts um zu den verschiedenen Ansichten zu gelangen.</string>
+    <string name="welcome">Willkommen,</string>
+    <string name="temperature">Temperatur</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_pressure">Luftdrucksensor</string>
+    <string name="pressure">Luftdrucksensor</string>
+    <string name="height">Höhe:</string>
+    <string name="airpressure">Luftdruck:</string>
+</resources>

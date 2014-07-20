@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/VentanillaApp.iml" filepath="$PROJECT_DIR$/VentanillaApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/VentanillaApp/VentanillaApp-VentanillaApp.iml" filepath="$PROJECT_DIR$/VentanillaApp/VentanillaApp-VentanillaApp.iml" />
+    </modules>
+  </component>
+</project>
+

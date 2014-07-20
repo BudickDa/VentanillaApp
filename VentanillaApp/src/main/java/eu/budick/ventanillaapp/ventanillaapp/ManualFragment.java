@@ -92,6 +92,10 @@ public class ManualFragment extends Fragment {
         mListener = null;
     }
 
+    void starSetting(){
+        Intent intent = new Intent(this, SettingsActivity.class);
+    }
+
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated

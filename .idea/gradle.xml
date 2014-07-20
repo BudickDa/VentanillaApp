@@ -7,8 +7,8 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
-            <option value="I:\Ventanilla\Android\VentanillaApp" />
-            <option value="I:\Ventanilla\Android\VentanillaApp\VentanillaApp" />
+            <option value="I:\Repositories\VentanillaApp" />
+            <option value="I:\Repositories\VentanillaApp\VentanillaApp" />
           </set>
         </option>
       </GradleProjectSettings>

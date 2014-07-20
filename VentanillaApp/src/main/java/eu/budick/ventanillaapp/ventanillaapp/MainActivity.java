@@ -103,6 +103,15 @@ public class MainActivity extends FragmentActivity implements ActionBar.TabListe
     }
 
 
+    public void startSettings(View view) {
+        try {
+            Intent intent = new Intent(new Intent(this, SettingsActivity.class));
+            startActivity(intent);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

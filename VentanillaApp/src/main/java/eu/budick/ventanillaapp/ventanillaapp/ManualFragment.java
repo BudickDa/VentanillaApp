@@ -2,12 +2,13 @@ package eu.budick.ventanillaapp.ventanillaapp;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import android.widget.Button;
 
 
 /**
@@ -59,6 +60,20 @@ public class ManualFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
+        /*Button prefBtn = (Button) findViewById(R.id.settingsBtn);
+
+        prefBtn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                try {
+                    Intent intent = new Intent(new Intent(getActivity(), SettingsActivity.class));
+                    startActivity(intent);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });*/
+
     }
 
     @Override
@@ -92,10 +107,6 @@ public class ManualFragment extends Fragment {
         mListener = null;
     }
 
-    void starSetting(){
-        Intent intent = new Intent(this, SettingsActivity.class);
-    }
-
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated
@@ -110,5 +121,6 @@ public class ManualFragment extends Fragment {
         // TODO: Update argument type and name
         public void onFragmentInteraction(Uri uri);
     }
+
 
 }

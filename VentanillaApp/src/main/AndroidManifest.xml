@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="eu.budick.ventanillaapp.ventanillaapp" >
 
+    <uses-sdk
+        android:maxSdkVersion="19"
+        android:minSdkVersion="18"
+        android:targetSdkVersion="18" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"

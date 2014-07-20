@@ -15,4 +15,7 @@
     <string name="pressure">Luftdrucksensor</string>
     <string name="height">Höhe:</string>
     <string name="airpressure">Luftdruck:</string>
+    <string name="buttonSettings">Einstellungen:</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
 </resources>

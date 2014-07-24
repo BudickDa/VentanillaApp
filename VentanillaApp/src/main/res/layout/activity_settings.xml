@@ -9,5 +9,24 @@
     tools:context="eu.budick.ventanillaapp.ventanillaapp.SettingsActivity">
 
 
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Speichern"
+        android:id="@+id/saveIp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="saveIp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/setIp"
+        android:inputType="Ip des Zielservers"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="61dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        tools:ignore="LabelFor" />
 
 </RelativeLayout>

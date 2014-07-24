@@ -35,4 +35,19 @@ public class SettingsActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void saveIp(View view) {
+        try {
+            ip   = (EditText)findViewById(R.id.setIp);
+            string ipString = ip.getText().toString();
+            SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+            SharedPreferences.Editor editor = settings.edit();
+            editor.putString("ip", ipString);
+
+            // Commit the edits!
+            editor.commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
 }

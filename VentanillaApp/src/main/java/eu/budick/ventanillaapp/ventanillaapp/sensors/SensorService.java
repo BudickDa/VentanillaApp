@@ -248,7 +248,9 @@ class SendData extends AsyncTask<String, Void, Boolean> {
         try {
             HttpClient httpclient = new DefaultHttpClient();
             //Laptop
-            HttpPost httppost = new HttpPost("http://192.168.178.39:3000/api");
+            SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+            string ip = settings.getString("ip", false);
+            HttpPost httppost = new HttpPost("http://"+ip+"/api");
             //Win7 PC
             //HttpPost httppost = new HttpPost("http://192.168.178.28:3000/api");
 

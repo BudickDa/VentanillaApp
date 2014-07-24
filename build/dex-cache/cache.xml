@@ -2,6 +2,12 @@
 <pre-dex-items>
 
     <item
+        dex="I:\Repositories\VentanillaApp\VentanillaApp\build\pre-dexed\debug\classes-3d08d00c2d8fedfa529d19207c31ffd187ee6f50.jar"
+        jar="I:\Repositories\VentanillaApp\build\exploded-aar\com.google.android.gms\play-services\4.2.42\classes.jar"
+        jumboMode="false"
+        revision="19.0.3"
+        sha1="e5f81129dfb3d02df80126512bc98278ed2bb40a"/>
+    <item
         dex="I:\Ventanilla\Android\VentanillaApp\VentanillaApp\build\pre-dexed\debug\support-v13-19.1.0-94675a09d4167e3aecf283b0f4631075e65530b6.jar"
         jar="I:\Android Windows\sdk\extras\android\m2repository\com\android\support\support-v13\19.1.0\support-v13-19.1.0.jar"
         jumboMode="false"

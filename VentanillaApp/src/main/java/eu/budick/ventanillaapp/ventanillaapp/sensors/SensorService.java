@@ -1,7 +1,9 @@
 package eu.budick.ventanillaapp.ventanillaapp.sensors;
 
 import android.app.Service;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -14,6 +16,7 @@ import android.os.IBinder;
 import android.os.Looper;
 import android.os.Message;
 import android.os.Process;
+import android.preference.PreferenceManager;
 import android.util.Log;
 
 import org.apache.http.HttpResponse;
@@ -37,11 +40,13 @@ import java.util.List;
 
 
 public class SensorService extends Service {
+    public static final String PREFS_NAME = "MyPrefsFile";
     private SensorManager mSensorManager = null;
     private ServiceHandler mServiceHandler;
     private final IBinder mBinder = new SensorLocalBinder();
     int mStartMode;
     boolean mAllowRebind;
+    Context context = this;
 
     /*Sensordata*/
     private HashMap values = new HashMap();
@@ -103,7 +108,7 @@ public class SensorService extends Service {
             if (sensor.getType() == Sensor.TYPE_PRESSURE) {
                 try {
                     values.put(Sensor.TYPE_PRESSURE, event.values);
-                    sendToServer(getSensorValues(Sensor.TYPE_PRESSURE)[0],"Pressure");
+                    sendToServer(getSensorValues(Sensor.TYPE_PRESSURE)[0],"Pressure", context);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -222,7 +227,7 @@ public class SensorService extends Service {
         }
     }
 
-    public void sendToServer(float value, String name){
+    public void sendToServer(float value, String name, Context context){
         //postData(name,value);
         try {
             JSONObject data = new JSONObject();
@@ -235,7 +240,8 @@ public class SensorService extends Service {
             header.put("language", "es-es");	// Language of the Android client
             data.put("header", header);
             String dataString = data.toString();
-            new SendData().execute(dataString);
+
+            new SendData(context).execute(dataString);
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -243,16 +249,20 @@ public class SensorService extends Service {
 }
 
 class SendData extends AsyncTask<String, Void, Boolean> {
+    public static final String PREFS_NAME = "MyPrefsFile";
+    private Context mContext;
+    public SendData (Context context){
+        mContext = context;
+    }
     @Override
     protected Boolean doInBackground(String... data) {
         try {
             HttpClient httpclient = new DefaultHttpClient();
-            //Laptop
-            SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
-            string ip = settings.getString("ip", false);
+
+            SharedPreferences settings = mContext.getSharedPreferences(PREFS_NAME, 0);
+            String ip = settings.getString("ip","192.168.178.35:3000");
             HttpPost httppost = new HttpPost("http://"+ip+"/api");
-            //Win7 PC
-            //HttpPost httppost = new HttpPost("http://192.168.178.28:3000/api");
+
 
             try {
                 StringEntity se = new StringEntity(data[0]);

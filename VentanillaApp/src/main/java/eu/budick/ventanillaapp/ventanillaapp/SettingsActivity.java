@@ -1,13 +1,16 @@
 package eu.budick.ventanillaapp.ventanillaapp;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.EditText;
 
 
 public class SettingsActivity extends Activity {
-
+    public static final String PREFS_NAME = "MyPrefsFile";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,8 +40,8 @@ public class SettingsActivity extends Activity {
 
     public void saveIp(View view) {
         try {
-            ip   = (EditText)findViewById(R.id.setIp);
-            string ipString = ip.getText().toString();
+            EditText ip   = (EditText)findViewById(R.id.setIp);
+            String ipString = ip.getText().toString();
             SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
             SharedPreferences.Editor editor = settings.edit();
             editor.putString("ip", ipString);
